@@ -49,11 +49,11 @@ export default function Portfolio() {
             <h1 className={styles.welcomeTitle}>Welcome.</h1>
             <div className={styles.intro}>
               <p className={styles.introText}>
-                My name is Barclay Leach. I'm a full-stack developer and Systems and Computer Engineering student. 💻
+                My name is Barclay Leach. I&apos;m a full-stack developer and Systems and Computer Engineering student. 💻
                 Skilled in React, Next.js, SASS, and Django, with experience delivering real-world platforms.
               </p>
               <p className={styles.introSubtext}>
-                I'm passionate about creating cutting-edge, pixel-perfect, beautiful interfaces and intuitively
+                I&apos;m passionate about creating cutting-edge, pixel-perfect, beautiful interfaces and intuitively
                 implemented user experiences.
               </p>
             </div>
