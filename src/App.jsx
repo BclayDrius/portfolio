@@ -6,19 +6,19 @@ function App() {
       title: "MaXGrind 💪",
       description: "Powerlifting & hypertrophy platform",
       status: "Active",
-      placeholder: "maxgrind-preview.jpg",
+      image: "/maxgrind-preview.png",
     },
     {
       title: "After Life 🧑🏻‍🏫",
       description: "(Stay tuned...)",
       status: "Coming Soon",
-      placeholder: "afterlife-preview.jpg",
+      image: "/afterlife.png",
     },
     {
       title: "Macerados Emperador Inka 🇵🇪",
       description: "Homegrown project with Peruvian vibes",
       status: "Active",
-      placeholder: "emperador-preview.jpg",
+      image: "/macerados-preview.png",
     },
   ];
 
@@ -30,10 +30,14 @@ function App() {
           <div className="header-content">
             <div className="profile-section">
               <div className="profile-image">
-                <div className="gym-icon">💪</div>
+                <img
+                  src="https://res.cloudinary.com/dtjygcy2x/image/upload/v1757803181/me.png"
+                  alt="b_clay profile"
+                  className="profile-photo"
+                />
               </div>
               <div className="profile-info">
-                <h1 className="name">b_clay</h1>
+                <h1 className="name">Barclay Leach</h1>
                 <p className="tagline">
                   Tech Obsession × Fitness Madness × World Curiosity
                 </p>
@@ -95,9 +99,11 @@ function App() {
             {projects.map((project, index) => (
               <div key={index} className="project-card">
                 <div className="project-image">
-                  <div className="placeholder-image">
-                    <span>📸 {project.placeholder}</span>
-                  </div>
+                  <img
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    className="project-preview"
+                  />
                   <div
                     className={`status-badge ${project.status
                       .toLowerCase()
