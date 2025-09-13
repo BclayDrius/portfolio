@@ -41,7 +41,36 @@ function App() {
                 <p className="tagline">
                   Tech Obsession × Fitness Madness × World Curiosity
                 </p>
-                <div className="pronouns">bar/clay</div>
+                <div className="profile-actions">
+                  <div className="pronouns">bar/clay</div>
+                  <a
+                    href="https://github.com/BclayDrius"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mini-github-btn"
+                    title="Follow on GitHub"
+                  >
+                    BclayDrius 🐈‍⬛
+                  </a>
+                  <a
+                    href="https://www.instagram.com/barclayleach_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mini-instagram-btn"
+                    title="Follow on Instagram"
+                  >
+                    barclayleach_ 📷
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/barclay-leach/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mini-linkedin-btn"
+                    title="Follow on LinkedIn"
+                  >
+                    Barclay Leach 💼
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -131,6 +160,20 @@ function App() {
             <p>
               📫 Reach me: <span className="highlight">b_clay</span> on Discord
             </p>
+            <p>
+              ✉️ Email:{" "}
+              <span className="highlight">barclaydario@gmail.com</span>
+            </p>
+            <div className="social-links">
+              <a
+                href="https://www.instagram.com/barclayleach_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-btn instagram-btn"
+              >
+                📷 Follow on Instagram
+              </a>
+            </div>
             <p className="fun-fact">
               ⚡ Fun Fact: I genuinely love everything above.
             </p>

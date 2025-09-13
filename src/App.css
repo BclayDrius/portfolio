@@ -92,13 +92,74 @@ body {
   margin-bottom: 10px;
 }
 
-.pronouns {
-  background: #ffa700;
+.profile-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.github-btn {
+  background: #0D1117 !important;
   color: #2e2323;
   padding: 5px 15px;
   border-radius: 20px;
   font-weight: bold;
   display: inline-block;
+}
+
+/* Base styles for mini social buttons */
+.mini-instagram-btn,
+.mini-github-btn,
+.mini-linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+/* Instagram button */
+.mini-instagram-btn {
+  background: linear-gradient(45deg, #e1306c, #fd1d1d, #fcb045);
+  box-shadow: 0 3px 10px rgba(225, 48, 108, 0.3);
+}
+
+.mini-instagram-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(225, 48, 108, 0.5);
+  color: white;
+}
+
+/* GitHub button */
+.mini-github-btn {
+  background: linear-gradient(45deg, #333, #24292e);
+  box-shadow: 0 3px 10px rgba(36, 41, 46, 0.3);
+}
+
+.mini-github-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(36, 41, 46, 0.5);
+  color: white;
+}
+
+/* LinkedIn button */
+.mini-linkedin-btn {
+  background: linear-gradient(45deg, #0A66C2, #004182);
+  box-shadow: 0 3px 10px rgba(10, 102, 194, 0.3);
+}
+
+.mini-linkedin-btn:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 5px 15px rgba(10, 102, 194, 0.5);
+  color: white;
 }
 
 /* Section Styles */
@@ -301,6 +362,39 @@ body {
 .highlight {
   color: #ffa700;
   font-weight: bold;
+}
+
+.social-links {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.instagram-btn {
+  background: linear-gradient(45deg, #e1306c, #fd1d1d, #fcb045);
+  color: white;
+  box-shadow: 0 4px 15px rgba(225, 48, 108, 0.3);
+}
+
+.instagram-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(225, 48, 108, 0.5);
+  border-color: #e1306c;
 }
 
 .fun-fact {
