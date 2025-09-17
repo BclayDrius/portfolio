@@ -44,7 +44,7 @@ function App() {
                   Tech Obsession × Fitness Madness × World Curiosity
                 </p>
                 <div className="profile-actions">
-                  <div className="pronouns">bar/clay</div>
+                  <div className="pronouns">Network:</div>
                   <a
                     href="https://github.com/BclayDrius"
                     target="_blank"
@@ -193,7 +193,7 @@ function App() {
       <footer className="footer">
         <div className="container">
           <p>
-            &copy; 2024 b_clay. Built with React + Vite. No pain, no gain! 💪
+            &copy; 2025 b_clay. Built with React + Vite. No pain, no gain! 💪
           </p>
         </div>
       </footer>
