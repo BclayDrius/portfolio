@@ -7,7 +7,9 @@ function App() {
       description: "Powerlifting & hypertrophy platform",
       status: "Active",
       image: "/maxgrind-preview.png",
+      link: "https://bclaydrius.github.io/maxgrind/",
     },
+
     {
       title: "After Life 🧑🏻‍🏫",
       description: "(Stay tuned...)",
@@ -144,7 +146,13 @@ function App() {
                 <div className="project-content">
                   <h3 className="project-title">{project.title}</h3>
                   <p className="project-description">{project.description}</p>
-                  <button className="project-btn">View Project</button>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    className="project-btn"
+                  >
+                    View Project
+                  </a>
                 </div>
               </div>
             ))}
