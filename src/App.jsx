@@ -4,22 +4,29 @@ function App() {
   const projects = [
     {
       title: "MaXGrind 💪",
-      description: "Powerlifting & hypertrophy platform",
-      status: "Active",
+      description:
+        "Plataforma integral para powerlifting e hipertrofia muscular",
+      status: "Activo",
       image: "/maxgrind-preview.png",
       link: "https://bclaydrius.github.io/maxgrind/",
     },
-
     {
-      title: "After Life 🧑🏻‍🏫",
-      description: "(Stay tuned...)",
-      status: "Coming Soon",
+      title: "Zent Academy 🧑🏻‍🏫",
+      description: "Plataforma educativa innovadora (próximamente)",
+      status: "Próximamente",
       image: "/afterlife.png",
     },
     {
+      title: "Zentipiper 🎯",
+      description: "Aplicación web moderna con diseño elegante y funcional",
+      status: "Activo",
+      image: "/zentipiper-preview.png",
+      link: "https://zentpiper.vercel.app/",
+    },
+    {
       title: "Macerados Emperador Inka 🇵🇪",
-      description: "Homegrown project with Peruvian vibes",
-      status: "Active",
+      description: "Proyecto artesanal con auténtica esencia peruana",
+      status: "Activo",
       image: "/macerados-preview.png",
     },
   ];
@@ -41,36 +48,28 @@ function App() {
               <div className="profile-info">
                 <h1 className="name">Barclay Leach</h1>
                 <p className="tagline">
-                  Tech Obsession × Fitness Madness × World Curiosity
+                  Desarrollador Full Stack × Entusiasta del Fitness × Explorador
+                  del Mundo
                 </p>
                 <div className="profile-actions">
-                  <div className="pronouns">Network:</div>
+                  <div className="pronouns">bar/clay</div>
                   <a
                     href="https://github.com/BclayDrius"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mini-github-btn"
-                    title="Follow on GitHub"
+                    title="Sígueme en GitHub"
                   >
                     BclayDrius 🐈‍⬛
-                  </a>
-                  <a
-                    href="https://www.instagram.com/barclayleach_"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mini-instagram-btn"
-                    title="Follow on Instagram"
-                  >
-                    barclayleach_ 📷
                   </a>
                   <a
                     href="https://www.linkedin.com/in/barclay-leach/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mini-linkedin-btn"
-                    title="Follow on LinkedIn"
+                    title="Conéctate en LinkedIn"
                   >
-                    Barclay Leach 💼
+                    Barclay Leach �
                   </a>
                 </div>
               </div>
@@ -82,40 +81,42 @@ function App() {
       {/* About Section */}
       <section className="about">
         <div className="container">
-          <h2 className="section-title">About Me</h2>
+          <h2 className="section-title">Sobre Mí</h2>
           <p className="about-text">
-            I'm a fusion of tech obsession, fitness madness, and curiosity for
-            the world
+            Soy una fusión entre la pasión por la tecnología, el entusiasmo por
+            el fitness y la curiosidad por el mundo que nos rodea
           </p>
 
           <div className="info-grid">
             <div className="info-card">
-              <h3>🔭 Current Projects</h3>
+              <h3>🔭 Proyectos Actuales</h3>
               <ul>
-                <li>MaXGrind 💪 – Powerlifting & hypertrophy platform</li>
-                <li>After Life 🧑🏻‍🏫 – (Stay tuned...)</li>
+                <li>MaXGrind 💪 – Plataforma de powerlifting e hipertrofia</li>
+                <li>Zent Academy 🧑🏻‍🏫 – Plataforma educativa (próximamente)</li>
+                <li>Zentipiper 🎯 – Aplicación web moderna</li>
                 <li>
-                  Macerados Emperador Inka 🇵🇪 – Homegrown project with Peruvian
-                  vibes
+                  Macerados Emperador Inka 🇵🇪 – Proyecto con esencia peruana
                 </li>
               </ul>
             </div>
 
             <div className="info-card">
-              <h3>🌱 Learning</h3>
+              <h3>🌱 Aprendiendo</h3>
               <ul>
-                <li>Next.js + React</li>
-                <li>Django backend magic</li>
-                <li>Japanese 🇯🇵 (because reading kanji is fun)</li>
+                <li>Next.js + React (Desarrollo Frontend)</li>
+                <li>Django (Backend y APIs)</li>
+                <li>Japonés 🇯🇵 (Porque leer kanji es fascinante)</li>
+                <li>Arquitectura de microservicios</li>
               </ul>
             </div>
 
             <div className="info-card">
-              <h3>💬 Ask me about</h3>
+              <h3>💬 Pregúntame sobre</h3>
               <ul>
-                <li>Linux & ricing desktops 🐧</li>
-                <li>MMA, UFC, and Gym life 💪</li>
-                <li>Weird tech combos that somehow work</li>
+                <li>Desarrollo web full stack 💻</li>
+                <li>Linux y personalización de escritorios 🐧</li>
+                <li>Entrenamiento y vida fitness 💪</li>
+                <li>Inglés nativo y traducción técnica 🌍</li>
               </ul>
             </div>
           </div>
@@ -125,7 +126,7 @@ function App() {
       {/* Projects Section */}
       <section className="projects">
         <div className="container">
-          <h2 className="section-title">My Projects</h2>
+          <h2 className="section-title">Mis Proyectos</h2>
           <div className="projects-grid">
             {projects.map((project, index) => (
               <div key={index} className="project-card">
@@ -151,7 +152,7 @@ function App() {
                     target="_blank"
                     className="project-btn"
                   >
-                    View Project
+                    Ver Proyecto
                   </a>
                 </div>
               </div>
@@ -163,27 +164,19 @@ function App() {
       {/* Contact Section */}
       <section className="contact">
         <div className="container">
-          <h2 className="section-title">Get In Touch</h2>
+          <h2 className="section-title">Contacto</h2>
           <div className="contact-content">
             <p>
-              📫 Reach me: <span className="highlight">b_clay</span> on Discord
+              📫 Encuéntrame en Discord:{" "}
+              <span className="highlight">b_clay</span>
             </p>
             <p>
               ✉️ Email:{" "}
               <span className="highlight">barclaydario@gmail.com</span>
             </p>
-            <div className="social-links">
-              <a
-                href="https://www.instagram.com/barclayleach_"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-btn instagram-btn"
-              >
-                📷 Follow on Instagram
-              </a>
-            </div>
+
             <p className="fun-fact">
-              ⚡ Fun Fact: I genuinely love everything above.
+              ⚡ Dato curioso: Realmente amo todo lo mencionado anteriormente.
             </p>
           </div>
         </div>
@@ -193,7 +186,8 @@ function App() {
       <footer className="footer">
         <div className="container">
           <p>
-            &copy; 2025 b_clay. Built with React + Vite. No pain, no gain! 💪
+            &copy; 2025 b_clay. Desarrollado con React + Vite. ¡Sin dolor, no
+            hay ganancia! 💪
           </p>
         </div>
       </footer>

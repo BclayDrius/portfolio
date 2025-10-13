@@ -9,7 +9,8 @@ I'm a fusion of tech obsession, fitness madness, and curiosity for the world. Th
 ## Featured Projects
 
 - **MaXGrind 💪** - Powerlifting & hypertrophy platform
-- **After Life 🧑🏻‍🏫** - (Stay tuned...)
+- **Zent Academy 🧑🏻‍🏫** - (Stay tuned...)
+- **Zentipiper 🎯** - Modern web application with sleek design
 - **Macerados Emperador Inka 🇵🇪** - Homegrown project with Peruvian vibes
 
 ## Tech Stack
