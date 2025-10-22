@@ -137,22 +137,37 @@ function App() {
             </div>
 
             <div className="info-card">
+              <h3>💻 Tecnologías que usé</h3>
+              <ul>
+                <li>JavaScript & TypeScript</li>
+                <li>React.js & Next.js</li>
+                <li>HTML, CSS & SASS</li>
+                <li>PostgreSQL, SQLite & Supabase</li>
+                <li>Git & GitHub</li>
+                <li>XML & JSON</li>
+                <li>SEO & Web Scraping</li>
+                <li>Metodologías Ágiles</li>
+              </ul>
+            </div>
+
+            <div className="info-card">
               <h3>🌱 Aprendiendo</h3>
               <ul>
-                <li>Next.js + React (Desarrollo Frontend)</li>
-                <li>Django (Backend y APIs)</li>
-                <li>Japonés 🇯🇵 (Porque leer kanji es fascinante)</li>
+                <li>React Native - Expo</li>
+                <li>Appwrite</li>
+                <li>Aptitudes profesionales</li>
+                <li>Temas de administración</li>
                 <li>Arquitectura de microservicios</li>
               </ul>
             </div>
 
             <div className="info-card">
-              <h3>💬 Pregúntame sobre</h3>
+              <h3>🌍 Idiomas</h3>
               <ul>
-                <li>Desarrollo web full stack 💻</li>
-                <li>Linux y personalización de escritorios 🐧</li>
-                <li>Entrenamiento y vida fitness 💪</li>
-                <li>Inglés nativo y traducción técnica 🌍</li>
+                <li>🇪🇸 Español – Competencia bilingüe o nativa</li>
+                <li>🇺🇸 English – Competencia bilingüe o nativa</li>
+                <li>🇧🇷 Português – Competencia básica limitada</li>
+                <li>🇯🇵 日本語 – Competencia básica</li>
               </ul>
             </div>
           </div>
