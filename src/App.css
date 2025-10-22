@@ -301,6 +301,12 @@ body {
   color: #fff;
 }
 
+.status-badge.inactivo {
+  background: #888;
+  color: #fff;
+  opacity: 0.8;
+}
+
 /* Mantener compatibilidad con inglés */
 .status-badge.active {
   background: #ffa700;
@@ -310,6 +316,12 @@ body {
 .status-badge.coming-soon {
   background: #666;
   color: #fff;
+}
+
+.status-badge.inactive {
+  background: #888;
+  color: #fff;
+  opacity: 0.8;
 }
 
 .project-content {

@@ -11,6 +11,8 @@ I'm a fusion of tech obsession, fitness madness, and curiosity for the world. Th
 - **MaXGrind 💪** - Powerlifting & hypertrophy platform
 - **Zent Academy 🧑🏻‍🏫** - (Stay tuned...)
 - **Zentipiper 🎯** - Modern web application with sleek design
+- **Cernext 🚀** - Advanced web platform with cutting-edge technology
+- **El Hada Artesana ☕** - Coffee shop in San Bartolo, Lima (Inactive)
 - **Macerados Emperador Inka 🇵🇪** - Homegrown project with Peruvian vibes
 
 ## Tech Stack

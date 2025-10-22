@@ -17,17 +17,32 @@ function App() {
       image: "/afterlife.png",
     },
     {
-      title: "Zentipiper 🎯",
+      title: "Zentpiper 🎯",
       description: "Aplicación web moderna con diseño elegante y funcional",
       status: "Activo",
-      image: "/zentipiper-preview.png",
+      image: "/zentpiper.png",
       link: "https://zentpiper.vercel.app/",
+    },
+    {
+      title: "Cernext 🚀",
+      description: "Plataforma web avanzada con tecnología de vanguardia",
+      status: "Activo",
+      image: "/cernext.png",
+      link: "https://cernext.vercel.app/",
+    },
+    {
+      title: "El Hada Artesana ☕",
+      description: "Cafetería en San Bartolo, Lima - Proyecto gastronómico",
+      status: "Inactivo",
+      image: "/artesana.png",
+      link: "https://github.com/BclayDrius/artesana",
     },
     {
       title: "Macerados Emperador Inka 🇵🇪",
       description: "Proyecto artesanal con auténtica esencia peruana",
-      status: "Activo",
+      status: "Inactivo",
       image: "/macerados-preview.png",
+      link: "https://github.com/BclayDrius/chelas",
     },
   ];
 
@@ -48,8 +63,7 @@ function App() {
               <div className="profile-info">
                 <h1 className="name">Barclay Leach</h1>
                 <p className="tagline">
-                  Desarrollador Full Stack × Entusiasta del Fitness × Explorador
-                  del Mundo
+                  Desarrollador Full Stack × Entusiasta del Fitness
                 </p>
                 <div className="profile-actions">
                   <div className="pronouns">bar/clay</div>
@@ -89,11 +103,13 @@ function App() {
 
           <div className="info-grid">
             <div className="info-card">
-              <h3>🔭 Proyectos Actuales</h3>
+              <h3>🔭 Proyectos</h3>
               <ul>
                 <li>MaXGrind 💪 – Plataforma de powerlifting e hipertrofia</li>
                 <li>Zent Academy 🧑🏻‍🏫 – Plataforma educativa (próximamente)</li>
                 <li>Zentipiper 🎯 – Aplicación web moderna</li>
+                <li>Cernext 🚀 – Plataforma web avanzada</li>
+                <li>El Hada Artesana ☕ – Cafetería en San Bartolo, Lima</li>
                 <li>
                   Macerados Emperador Inka 🇵🇪 – Proyecto con esencia peruana
                 </li>
