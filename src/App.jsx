@@ -20,9 +20,9 @@ function App() {
       title: "Zentpiper 🎯",
       description:
         "Página web en donde se cotizan servicios de creación de páginas web",
-      status: "Activo",
+      status: "Destacado",
       image: "/zentpiper.png",
-      link: "https://zentpiper.vercel.app/",
+      link: "https://www.zentpiper.com/",
     },
     {
       title: "Cernext 🚀",
