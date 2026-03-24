@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 const experience = [
@@ -88,7 +89,7 @@ const projects = [
     description:
       "Full-stack fitness platform — payment integration, technical SEO, and systems architecture.",
     url: "https://www.ketbia.com/",
-    image: "/maxgrind-preview.png",
+    image: "/ketbia.png",
     tags: ["React", "SEO", "Payments"],
   },
   {
@@ -96,23 +97,16 @@ const projects = [
     description:
       "Premium web solution with a custom WordPress reservation plugin via Telegram Bot API and SMTP.",
     url: "https://baronclub.es/",
-    image: "/zentpiper.png",
+    image: "/baronclub.png",
     tags: ["WordPress", "Telegram API", "SMTP"],
   },
   {
-    title: "El Hada Artesana",
-    description: "Frontend for a local artisan café in San Bartolo, Lima.",
-    url: "https://github.com/BclayDrius/artesana",
-    image: "/artesana.png",
-    tags: ["React", "CSS"],
-  },
-  {
-    title: "Zentpiper",
+    title: "MaXGrind",
     description:
-      "Web agency landing page for quoting web development services.",
-    url: "https://www.zentpiper.com/",
-    image: "/cernext.png",
-    tags: ["React", "Vite"],
+      "Migrating this project to a React Native – Expo application with Supabase backend.",
+    url: "https://bclaydrius.github.io/maxgrind/",
+    image: "/maxgrind-preview.png",
+    tags: ["React Native", "Expo", "Supabase"],
   },
 ];
 
@@ -153,9 +147,157 @@ const certifications = [
   "JavaScript",
 ];
 
+const languages = [
+  { lang: "Spanish", level: "Native / Bilingual" },
+  { lang: "English", level: "Native / Bilingual" },
+  { lang: "Portuguese", level: "Limited Working" },
+  { lang: "Japanese", level: "Elementary" },
+];
+
+// ── PDF / simplified view ──────────────────────────────────────────────────
+function PdfView({ onClose }) {
+  return (
+    <div className="pdf-overlay">
+      <div className="pdf-toolbar no-print">
+        <span className="pdf-toolbar-title">PDF Preview</span>
+        <div className="pdf-toolbar-actions">
+          <button className="btn btn-primary" onClick={() => window.print()}>
+            Print / Save as PDF
+          </button>
+          <button className="btn btn-ghost" onClick={onClose}>
+            ✕ Close
+          </button>
+        </div>
+      </div>
+
+      <div className="pdf-page">
+        {/* Sidebar */}
+        <aside className="pdf-sidebar">
+          <section>
+            <h4>Contact</h4>
+            <p>+51 988 490 319</p>
+            <p>barclaydario@gmail.com</p>
+            <p>
+              <a href="https://www.linkedin.com/in/barclay-leach">
+                linkedin.com/in/barclay-leach
+              </a>
+            </p>
+            <p>
+              <a href="https://github.com/BclayDrius">github.com/BclayDrius</a>
+            </p>
+            <p>
+              <a href="https://barclayleach.vercel.app/">
+                barclayleach.vercel.app
+              </a>
+            </p>
+          </section>
+          <section>
+            <h4>Languages</h4>
+            {languages.map((l) => (
+              <p key={l.lang}>
+                <strong>{l.lang}</strong> <span>{l.level}</span>
+              </p>
+            ))}
+          </section>
+          <section>
+            <h4>Tech Stack</h4>
+            {stack.map((s) => (
+              <p key={s}>{s}</p>
+            ))}
+          </section>
+          <section>
+            <h4>Certifications</h4>
+            {certifications.map((c) => (
+              <p key={c}>{c}</p>
+            ))}
+          </section>
+        </aside>
+
+        {/* Main */}
+        <main className="pdf-main">
+          <div className="pdf-header">
+            <h1>Barclay Leach</h1>
+            <p className="pdf-headline">
+              Systems Engineering Student | Web Developer at KetBia & Barón Club
+              | Bilingual Interpreter (EN/ES) at LanguageLine Solutions (LLS)
+            </p>
+            <p className="pdf-location">Lima Metropolitan Area, Perú</p>
+          </div>
+
+          <div className="pdf-section">
+            <h2>Experience</h2>
+            {experience.map((job, i) => (
+              <div key={i} className="pdf-job">
+                <div className="pdf-job-header">
+                  <strong>{job.role}</strong>
+                  <span>{job.period}</span>
+                </div>
+                <p className="pdf-job-meta">
+                  {job.company} · {job.location}
+                </p>
+                <ul>
+                  {job.bullets.map((b, j) => (
+                    <li key={j}>{b}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="pdf-section">
+            <h2>Education</h2>
+            {education.map((e, i) => (
+              <div key={i} className="pdf-job">
+                <div className="pdf-job-header">
+                  <strong>{e.degree}</strong>
+                  <span>{e.period}</span>
+                </div>
+                <p className="pdf-job-meta">{e.school}</p>
+              </div>
+            ))}
+          </div>
+        </main>
+
+        <div className="pdf-watermark">
+          pdf generated from barclayleach.vercel.app/
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Main App ───────────────────────────────────────────────────────────────
 export default function App() {
+  const [pdfMode, setPdfMode] = useState(false);
+
+  if (pdfMode) return <PdfView onClose={() => setPdfMode(false)} />;
+
   return (
     <div className="portfolio">
+      {/* Floating PDF button */}
+      <button
+        className="pdf-fab no-print"
+        onClick={() => setPdfMode(true)}
+        title="Export as PDF"
+      >
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+          <polyline points="14 2 14 8 20 8" />
+          <line x1="12" y1="18" x2="12" y2="12" />
+          <line x1="9" y1="15" x2="15" y2="15" />
+        </svg>
+        Export PDF
+      </button>
+
       {/* Hero */}
       <header className="hero">
         <div className="container hero-inner">
@@ -164,9 +306,9 @@ export default function App() {
             <p className="hero-label">Full Stack Developer</p>
             <h1>Barclay Leach</h1>
             <p className="hero-sub">
-              Systems Engineering student building scalable web platforms,
-              integrating payment systems, and bridging languages across
-              industries.
+              Systems Engineering Student | Web Developer at KetBia &amp; Barón
+              Club | Bilingual Interpreter (EN/ES) at LanguageLine Solutions
+              (LLS)
             </p>
             <div className="hero-links">
               <a
@@ -319,12 +461,7 @@ export default function App() {
         <div className="container">
           <h2 className="section-title">Languages</h2>
           <div className="lang-grid">
-            {[
-              { lang: "Spanish", level: "Native / Bilingual" },
-              { lang: "English", level: "Native / Bilingual" },
-              { lang: "Portuguese", level: "Limited Working" },
-              { lang: "Japanese", level: "Elementary" },
-            ].map((l) => (
+            {languages.map((l) => (
               <div key={l.lang} className="lang-card">
                 <span className="lang-name">{l.lang}</span>
                 <span className="lang-level">{l.level}</span>
