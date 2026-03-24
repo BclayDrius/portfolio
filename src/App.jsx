@@ -107,6 +107,15 @@ const projects = [
     url: "https://bclaydrius.github.io/maxgrind/",
     image: "/maxgrind-preview.png",
     tags: ["React Native", "Expo", "Supabase"],
+    wip: true,
+  },
+  {
+    title: "Cernext",
+    description: "Enterprise for technical solutions. Built with WordPress.",
+    url: "https://cernext.vercel.app/",
+    image: "/cernext.png",
+    tags: ["WordPress", "Technical Solutions"],
+    wip: true,
   },
 ];
 
@@ -118,12 +127,17 @@ const stack = [
   "Node.js",
   "Express",
   "WordPress",
+  "Supabase",
+  "PostgreSQL",
+  "API Management",
   "IONOS",
   "Web Hosting",
   "SQL",
   "NoSQL",
   "Technical SEO",
   "Git",
+  "Kiro (AI IDE)",
+  "Cursor (AI IDE)",
 ];
 
 const education = [
@@ -218,8 +232,9 @@ function PdfView({ onClose }) {
           <div className="pdf-header">
             <h1>Barclay Leach</h1>
             <p className="pdf-headline">
-              Systems Engineering Student | Web Developer at KetBia & Barón Club
-              | Bilingual Interpreter (EN/ES) at LanguageLine Solutions (LLS)
+              Systems Engineering Student | Web Developer at KetBia &amp; Barón
+              Club | Bilingual Interpreter (EN/ES) at LanguageLine Solutions
+              (LLS)
             </p>
             <p className="pdf-location">Lima Metropolitan Area, Perú</p>
           </div>
@@ -256,11 +271,11 @@ function PdfView({ onClose }) {
               </div>
             ))}
           </div>
-        </main>
 
-        <div className="pdf-watermark">
-          pdf generated from barclayleach.vercel.app/
-        </div>
+          <div className="pdf-watermark">
+            pdf generated from barclayleach.vercel.app/
+          </div>
+        </main>
       </div>
     </div>
   );
@@ -303,7 +318,6 @@ export default function App() {
         <div className="container hero-inner">
           <img src="/me.png" alt="Barclay Leach" className="avatar" />
           <div className="hero-text">
-            <p className="hero-label">Full Stack Developer</p>
             <h1>Barclay Leach</h1>
             <p className="hero-sub">
               Systems Engineering Student | Web Developer at KetBia &amp; Barón
@@ -410,7 +424,12 @@ export default function App() {
                   <img src={p.image} alt={p.title} />
                 </div>
                 <div className="project-body">
-                  <h3>{p.title}</h3>
+                  <h3>
+                    {p.title}
+                    {p.wip && (
+                      <span className="wip-badge">Work in Progress</span>
+                    )}
+                  </h3>
                   <p>{p.description}</p>
                   <div className="tags-row">
                     {p.tags.map((t) => (
