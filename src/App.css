@@ -595,3 +595,183 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid #f0a50044;
   vertical-align: middle;
 }
+
+/* ── Second FAB (Dev CV) ── */
+.fab-group {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.pdf-fab-dev {
+  background: #1a1a2e !important;
+  color: #7eb8ff !important;
+  border: 1px solid #2a3a5e;
+}
+
+.pdf-fab-dev:hover {
+  background: #22294a !important;
+  opacity: 1 !important;
+}
+
+/* ── Dev CV Page ── */
+.devcv-page {
+  width: 794px;
+  background: #fff;
+  color: #1a1a1a;
+  margin: 24px auto 48px;
+  padding: 48px 52px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  font-size: 11px;
+  line-height: 1.6;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+.devcv-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #1a1a1a;
+  margin-bottom: 20px;
+}
+
+.devcv-header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 3px;
+}
+
+.devcv-title {
+  font-size: 11px;
+  color: #555;
+}
+
+.devcv-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+  font-size: 10px;
+  color: #555;
+}
+
+.devcv-contact a { color: #1a5fa8; }
+
+.devcv-section {
+  margin-bottom: 18px;
+}
+
+.devcv-section h2 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #1a1a1a;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+
+.devcv-summary {
+  font-size: 10.5px;
+  color: #333;
+  line-height: 1.65;
+}
+
+.devcv-stack-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.devcv-stack-table tr + tr td { padding-top: 3px; }
+
+.devcv-stack-cat {
+  font-weight: 600;
+  font-size: 10px;
+  color: #1a1a1a;
+  width: 140px;
+  vertical-align: top;
+  padding-right: 12px;
+}
+
+.devcv-stack-items {
+  font-size: 10px;
+  color: #444;
+}
+
+.devcv-job {
+  margin-bottom: 12px;
+}
+
+.devcv-job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.devcv-job-header strong {
+  font-size: 11px;
+  color: #1a1a1a;
+  display: block;
+}
+
+.devcv-job-header strong a { color: #1a5fa8; }
+
+.devcv-company {
+  font-size: 10px;
+  color: #666;
+  display: block;
+  margin-top: 1px;
+}
+
+.devcv-company a { color: #1a5fa8; }
+
+.devcv-period {
+  font-size: 10px;
+  color: #888;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.devcv-job ul {
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.devcv-job li {
+  font-size: 10px;
+  color: #444;
+  line-height: 1.55;
+}
+
+.devcv-certs {
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.devcv-certs li { font-size: 10px; color: #444; }
+
+.devcv-langs { font-size: 10px; color: #444; }
+
+@media print {
+  .devcv-page {
+    width: 100%;
+    margin: 0;
+    padding: 32px 40px;
+    box-shadow: none;
+  }
+}

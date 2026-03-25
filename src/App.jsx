@@ -281,37 +281,318 @@ function PdfView({ onClose }) {
   );
 }
 
-// ── Main App ───────────────────────────────────────────────────────────────
+// ── Developer CV (IBM-targeted) ───────────────────────────────────────────
+const devCvExperience = [
+  {
+    company: "KetBia",
+    role: "Full Stack Developer & Web Systems Lead",
+    period: "Feb 2026 – Present",
+    location: "La Merced, Perú · Hybrid",
+    url: "https://www.ketbia.com/",
+    bullets: [
+      "Architected and developed a full-stack fitness platform using React and Node.js, handling both frontend UI and backend API services.",
+      "Designed and integrated RESTful APIs for payment gateway processing and third-party service automation.",
+      "Implemented technical SEO and systems architecture strategies, improving organic reach and platform scalability.",
+      "Managed deployment pipelines and web hosting infrastructure via IONOS, ensuring high availability.",
+    ],
+  },
+  {
+    company: "Barón Club",
+    role: "Full Stack Web Developer",
+    period: "Dec 2025 – Present",
+    location: "Valencia, España · Remote",
+    url: "https://baronclub.es/",
+    bullets: [
+      "Built and deployed baronclub.es, a production-level web application serving real users.",
+      "Engineered a custom WordPress plugin integrating Telegram Bot API and SMTP for automated reservation management — a full backend service with external API orchestration.",
+      "Collaborated cross-functionally with designers and stakeholders on system design and feature implementation.",
+    ],
+  },
+  {
+    company: "El Hada Artesana",
+    role: "Frontend Developer",
+    period: "Jun 2025 – Jul 2025",
+    location: "Lima, Perú · Remote",
+    bullets: [
+      "Developed a responsive React frontend with JavaScript, SASS, and component-based architecture.",
+      "Applied agile methodologies within a collaborative team environment.",
+    ],
+  },
+];
+
+const devCvProjects = [
+  {
+    title: "KetBia Platform",
+    url: "https://www.ketbia.com/",
+    bullets: [
+      "Full-stack web application: React frontend, Node.js/Express backend, SQL/NoSQL data layer.",
+      "RESTful API integration for payments, user management, and content delivery.",
+      "Deployed on IONOS with custom domain, SSL, and performance optimization.",
+    ],
+  },
+  {
+    title: "MaXGrind",
+    url: "https://bclaydrius.github.io/maxgrind/",
+    bullets: [
+      "Migrating to React Native – Expo with a Supabase (PostgreSQL) backend.",
+      "Demonstrates cross-platform development skills and cloud database integration.",
+    ],
+  },
+  {
+    title: "Barón Club Reservation Plugin",
+    url: "https://baronclub.es/",
+    bullets: [
+      "Custom backend service built as a WordPress plugin using PHP, Telegram Bot API, and SMTP.",
+      "Automated end-to-end reservation workflow with external API calls and email notifications.",
+    ],
+  },
+];
+
+const devStack = [
+  { category: "Languages", items: "JavaScript (ES6+), TypeScript" },
+  {
+    category: "Frontend",
+    items: "React, Next.js, React Native, HTML5, CSS3, SASS",
+  },
+  { category: "Backend", items: "Node.js, Express, RESTful APIs, PHP" },
+  { category: "Databases", items: "PostgreSQL, Supabase, SQL, NoSQL, MySQL" },
+  {
+    category: "Tools & Platforms",
+    items: "Git, GitHub, IONOS, WordPress, Vercel, API Management",
+  },
+  { category: "AI-Powered IDEs", items: "Kiro, Cursor" },
+  {
+    category: "Methodologies",
+    items: "Agile, Cross-functional collaboration, CI/CD awareness",
+  },
+];
+
+function DevCvView({ onClose }) {
+  return (
+    <div className="pdf-overlay">
+      <div className="pdf-toolbar no-print">
+        <span className="pdf-toolbar-title">
+          Developer CV — IBM Entry-Level Full Stack
+        </span>
+        <div className="pdf-toolbar-actions">
+          <button className="btn btn-primary" onClick={() => window.print()}>
+            Print / Save as PDF
+          </button>
+          <button className="btn btn-ghost" onClick={onClose}>
+            ✕ Close
+          </button>
+        </div>
+      </div>
+
+      <div className="devcv-page">
+        {/* Header */}
+        <div className="devcv-header">
+          <div>
+            <h1>Barclay Leach</h1>
+            <p className="devcv-title">
+              Full Stack Developer · Systems Engineering Student
+            </p>
+          </div>
+          <div className="devcv-contact">
+            <span>barclaydario@gmail.com</span>
+            <span>+51 988 490 319</span>
+            <span>
+              <a href="https://github.com/BclayDrius">github.com/BclayDrius</a>
+            </span>
+            <span>
+              <a href="https://www.linkedin.com/in/barclay-leach">
+                linkedin.com/in/barclay-leach
+              </a>
+            </span>
+            <span>
+              <a href="https://barclayleach.vercel.app/">
+                barclayleach.vercel.app
+              </a>
+            </span>
+          </div>
+        </div>
+
+        {/* Summary */}
+        <div className="devcv-section">
+          <h2>Summary</h2>
+          <p className="devcv-summary">
+            Full Stack Developer with hands-on production experience building
+            React and Node.js applications, designing RESTful APIs, and managing
+            end-to-end web systems. Currently pursuing a B.S. in Systems
+            Engineering and Computer Science. Proficient in TypeScript,
+            SQL/NoSQL databases, and cross-functional collaboration. Experienced
+            working remotely with international teams. Fluent in English and
+            Spanish.
+          </p>
+        </div>
+
+        {/* Tech Stack */}
+        <div className="devcv-section">
+          <h2>Technical Skills</h2>
+          <table className="devcv-stack-table">
+            <tbody>
+              {devStack.map((row) => (
+                <tr key={row.category}>
+                  <td className="devcv-stack-cat">{row.category}</td>
+                  <td className="devcv-stack-items">{row.items}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        {/* Experience */}
+        <div className="devcv-section">
+          <h2>Experience</h2>
+          {devCvExperience.map((job, i) => (
+            <div key={i} className="devcv-job">
+              <div className="devcv-job-header">
+                <div>
+                  <strong>{job.role}</strong>
+                  <span className="devcv-company">
+                    {job.url ? (
+                      <a href={job.url}>{job.company}</a>
+                    ) : (
+                      job.company
+                    )}
+                    {" · "}
+                    {job.location}
+                  </span>
+                </div>
+                <span className="devcv-period">{job.period}</span>
+              </div>
+              <ul>
+                {job.bullets.map((b, j) => (
+                  <li key={j}>{b}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Projects */}
+        <div className="devcv-section">
+          <h2>Projects</h2>
+          {devCvProjects.map((p, i) => (
+            <div key={i} className="devcv-job">
+              <div className="devcv-job-header">
+                <strong>
+                  <a href={p.url}>{p.title}</a>
+                </strong>
+              </div>
+              <ul>
+                {p.bullets.map((b, j) => (
+                  <li key={j}>{b}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Education */}
+        <div className="devcv-section">
+          <h2>Education</h2>
+          {education.map((e, i) => (
+            <div key={i} className="devcv-job">
+              <div className="devcv-job-header">
+                <div>
+                  <strong>{e.degree}</strong>
+                  <span className="devcv-company">{e.school}</span>
+                </div>
+                <span className="devcv-period">{e.period}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Certifications */}
+        <div className="devcv-section">
+          <h2>Certifications</h2>
+          <ul className="devcv-certs">
+            {certifications.map((c) => (
+              <li key={c}>{c}</li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Languages */}
+        <div className="devcv-section">
+          <h2>Languages</h2>
+          <p className="devcv-langs">
+            {languages.map((l) => `${l.lang} (${l.level})`).join(" · ")}
+          </p>
+        </div>
+
+        <div
+          className="pdf-watermark"
+          style={{
+            textAlign: "right",
+            marginTop: "24px",
+            fontSize: "8px",
+            color: "#bbb",
+            fontStyle: "italic",
+          }}
+        >
+          pdf generated from barclayleach.vercel.app/
+        </div>
+      </div>
+    </div>
+  );
+}
 export default function App() {
   const [pdfMode, setPdfMode] = useState(false);
+  const [devCvMode, setDevCvMode] = useState(false);
 
   if (pdfMode) return <PdfView onClose={() => setPdfMode(false)} />;
+  if (devCvMode) return <DevCvView onClose={() => setDevCvMode(false)} />;
 
   return (
     <div className="portfolio">
-      {/* Floating PDF button */}
-      <button
-        className="pdf-fab no-print"
-        onClick={() => setPdfMode(true)}
-        title="Export as PDF"
-      >
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+      {/* Floating buttons */}
+      <div className="fab-group no-print">
+        <button
+          className="pdf-fab"
+          onClick={() => setPdfMode(true)}
+          title="Export full portfolio as PDF"
         >
-          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-          <polyline points="14 2 14 8 20 8" />
-          <line x1="12" y1="18" x2="12" y2="12" />
-          <line x1="9" y1="15" x2="15" y2="15" />
-        </svg>
-        Export PDF
-      </button>
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="12" y1="18" x2="12" y2="12" />
+            <line x1="9" y1="15" x2="15" y2="15" />
+          </svg>
+          Portfolio PDF
+        </button>
+        <button
+          className="pdf-fab pdf-fab-dev"
+          onClick={() => setDevCvMode(true)}
+          title="Export developer CV"
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+          </svg>
+          Dev CV
+        </button>
+      </div>
 
       {/* Hero */}
       <header className="hero">
