@@ -331,6 +331,18 @@ const devCvExperience = [
     ],
   },
   {
+    company: "Zent Piper",
+    role: "Senior Frontend Developer",
+    period: "Aug 2025 – Oct 2025",
+    location: "Lima, Perú · Hybrid",
+    url: "https://www.zentpiper.com/",
+    bullets: [
+      "Led complete frontend development of the official website, deployed on Vercel with a custom domain configured via Cloudflare.",
+      "Handled full web development and Google SEO simultaneously while onboarding the first client (Cegrisa) and delivering their first project stage.",
+      "Skills: Front-End Design · JavaScript · SEO · Vercel · Cloudflare.",
+    ],
+  },
+  {
     company: "El Hada Artesana",
     role: "Frontend Developer",
     period: "Jun 2025 – Jul 2025",
