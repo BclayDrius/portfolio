@@ -71,6 +71,18 @@ const experience = [
     ],
   },
   {
+    company: "Zent Piper",
+    role: "Senior Frontend Developer",
+    period: "Aug 2025 – Oct 2025",
+    location: "Lima, Perú · Hybrid",
+    url: "https://www.zentpiper.com/",
+    bullets: [
+      "Led the complete frontend development of the official website, deployed on Vercel with a custom domain configured via Cloudflare.",
+      "Handled full web development and Google SEO simultaneously while onboarding the first client (Cegrisa) and completing the first stage of their site.",
+      "Skills: Front-End Design · JavaScript · SEO · Vercel · Cloudflare.",
+    ],
+  },
+  {
     company: "Majanayim Sport",
     role: "Fitness Coach & Integral Wellness Advisor",
     period: "Jun 2024 – Aug 2024",
@@ -84,6 +96,14 @@ const experience = [
 ];
 
 const projects = [
+  {
+    title: "Zentpiper",
+    description:
+      "Official website for a web agency — full frontend development, Vercel deployment, and Cloudflare domain setup.",
+    url: "https://www.zentpiper.com/",
+    image: "/zentpiper.png",
+    tags: ["React", "Vercel", "Cloudflare", "SEO"],
+  },
   {
     title: "KetBia",
     description:
