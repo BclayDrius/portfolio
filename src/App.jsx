@@ -157,6 +157,8 @@ const stack = [
   "Technical SEO",
   "Git",
   "Kiro (AI IDE)",
+  "Vercel",
+  "Cloudflare",
   "Cursor (AI IDE)",
 ];
 
