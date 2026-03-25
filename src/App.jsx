@@ -14,18 +14,6 @@ const experience = [
     ],
   },
   {
-    company: "Teleperformance (TP)",
-    role: "Bilingual Interpreter (EN/ES) · Customer Interaction Expert",
-    period: "Oct 2025 – Present · 6 months",
-    location: "La Merced, Junín, Perú · Remote",
-    bullets: [
-      "Specialized interpretation: consecutive VRI/OPI services in real time for medical, legal, financial, and government sectors.",
-      "Terminology management: complex technical lexicon and effective cultural mediation under HIPAA and PCI privacy standards.",
-      "Quality assurance: compliance with international communication standards and data confidentiality protocols.",
-      "Customer Interaction Expert (Oct 2025 – Feb 2026): multichannel support (calls & chat) for Nordstrom.com, focused on account management, orders, and incident resolution in English.",
-    ],
-  },
-  {
     company: "KetBia",
     role: "Web Systems & Digital Infrastructure Lead",
     period: "Feb 2026 – Present",
@@ -156,6 +144,7 @@ const stack = [
   "NoSQL",
   "Technical SEO",
   "Git",
+  "Vite",
   "Kiro (AI IDE)",
   "Vercel",
   "Cloudflare",
@@ -392,7 +381,7 @@ const devStack = [
   { category: "Databases", items: "PostgreSQL, Supabase, SQL, NoSQL, MySQL" },
   {
     category: "Tools & Platforms",
-    items: "Git, GitHub, IONOS, WordPress, Vercel, API Management",
+    items: "Git, GitHub, Vite, IONOS, WordPress, Vercel, API Management",
   },
   { category: "AI-Powered IDEs", items: "Kiro, Cursor" },
   {
